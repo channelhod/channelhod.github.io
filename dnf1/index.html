@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DNF13年国庆套详细回顾与解析，包含礼包内容、外观展示、属性分析及当年获取方式。">
+    <meta name="keywords" content="dnf13年国庆套, DNF国庆礼包, DNF13周年庆, 地下城与勇士礼包">
+    <title>DNF13年国庆套-地下城与勇士13周年庆礼包回顾与属性解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-gold: #FFD700;
+            --primary-red: #D32F2F;
+            --bg-dark: #1a1a1a;
+            --bg-card: #2b2b2b;
+            --text-main: #ffffff;
+            --text-muted: #b0b0b0;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.9);
+            border-bottom: 2px solid var(--primary-gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-gold);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: normal;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-gold);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c0e0e 0%, #1a1a1a 100%);
+            padding: 60px 0;
+            text-align: center;
+            border-bottom: 4px solid var(--primary-red);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "13th Anniversary";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 10rem;
+            opacity: 0.03;
+            font-weight: bold;
+            white-space: nowrap;
+            pointer-events: none;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            border-left: 5px solid var(--primary-gold);
+            padding-left: 15px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Package Cards */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: var(--bg-card);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: var(--primary-gold);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            background-color: #000;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--primary-gold);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        .card-price {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Attribute List */
+        .attr-list {
+            list-style: none;
+        }
+
+        .attr-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #333;
+        }
+
+        .attr-item:last-child {
+            border-bottom: none;
+        }
+
+        .attr-name {
+            color: var(--text-muted);
+        }
+
+        .attr-val {
+            font-weight: bold;
+            color: var(--primary-gold);
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            border-left: 2px solid #444;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -36px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--primary-red);
+            border-radius: 50%;
+            border: 2px solid #1a1a1a;
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: var(--primary-gold);
+            margin-bottom: 5px;
+        }
+
+        /* Sidebar Ad Placeholder */
+        .sidebar-ad {
+            background: #333;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            margin-bottom: 30px;
+            border-radius: var(--border-radius);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            padding: 40px 0;
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .copyright {
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            nav {
+                display: none; /* Simplified for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                DNF礼包百科
+                <span>DNF 13th Anniversary</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">礼包大全</a></li>
+                    <li><a href="#">历史回顾</a></li>
+                    <li><a href="#">属性对比</a></li>
+                    <li><a href="#">玩家社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <span class="hero-tag">13周年纪念</span>
+                <h1>DNF13年国庆套回顾</h1>
+                <p>2013年国庆节推出的“大国庆套”，是DNF早期最具代表性的国庆礼包之一。包含天空套、宠物、称号及光环等核心道具。</p>
+            </div>
+        </section>
+
+        <div class="container content-grid">
+            <!-- Main Content -->
+            <div class="main-content">
+                
+                <!-- Package Overview -->
+                <section>
+                    <h2 class="section-title">礼包内容概览</h2>
+                    <div class="package-grid">
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/dnf13sky/400/250" alt="13年国庆天空套" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">天空套 - 赫尔德的祝福</h3>
+                                <p class="card-desc">包含5件套外观，开启后随机获得天空套。当年是提升角色外观的重要途径。</p>
+                                <div class="card-price">核心道具</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/dnf13pet/400/250" alt="13年国庆宠物" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">国庆宠物 - 独角仙</h3>
+                                <p class="card-desc">增加力量/智力/体力/精神，并带有移动速度和释放速度加成。</p>
+                                <div class="card-price">永久宠物</div>
+                            </div>
+                        </article>
+                        <article class="card">
+                            <img src="https://picsum.photos/seed/dnf13title/400/250" alt="13年国庆称号" class="card-img">
+                            <div class="card-body">
+                                <h3 class="card-title">国庆称号 - 传承荣耀</h3>
+                                <p class="card-desc">提供三速加成及全属性强化，是当时毕业级称号的重要来源。</p>
+                                <div class="card-price">史诗称号</div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Detailed Attributes -->
+                <section>
+                    <h2 class="section-title">详细属性解析</h2>
+                    <article class="card" style="padding: 25px;">
+                        <h3 style="color:var(--primary-gold); margin-bottom:15px;">国庆光环 - 祝福之光</h3>
+                        <p style="margin-bottom:20px; color:#ccc;">该光环提供以下属性加成，在当时是提升角色综合战力的关键装备。</p>
+                        <ul class="attr-list">
+                            <li class="attr-item">
+                                <span class="attr-name">力量/智力</span>
+                                <span class="attr-val">+10</span>
+                            </li>
+                            <li class="attr-item">
+                                <span class="attr-name">体力/精神</span>
+                                <span class="attr-val">+10</span>
+                            </li>
+                            <li class="attr-item">
+                                <span class="attr-name">施放速度</span>
+                                <span class="attr-val">+5%</span>
+                            </li>
+                            <li class="attr-item">
+                                <span class="attr-name">移动速度</span>
+                                <span class="attr-val">+3%</span>
+                            </li>
+                            <li class="attr-item">
+                                <span class="attr-name">物理/魔法攻击力</span>
+                                <span class="attr-val">+3%</span>
+                            </li>
+                        </ul>
+                    </article>
+                </section>
+
+                <!-- History & Background -->
+                <section>
+                    <h2 class="section-title">历史背景与获取</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-date">2013年9月</div>
+                            <p>国庆套正式上线，当时被称为“大国庆套”，礼包售价相对较高，但包含了极为诱人的天空套开启权。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2013年10月</div>
+                            <p>国庆活动开启，玩家通过累计充值或购买礼包获得相关道具，部分道具可进行交易。</p>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-date">2013年11月</div>
+                            <p>随着后续礼包的推出，部分13年国庆套道具因属性过时或外观版本更新而逐渐被淘汰。</p>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="sidebar-ad">
+                    广告位：13周年礼包回顾专题
+                </div>
+
+                <section>
+                    <h3 class="section-title">礼包购买指南</h3>
+                    <ul class="attr-list">
+                        <li class="attr-item" style="flex-direction:column; align-items:flex-start; gap:5px;">
+                            <span class="attr-name">礼包价格</span>
+                            <span class="attr-val">约 3900 点券</span>
+                        </li>
+                        <li class="attr-item" style="flex-direction:column; align-items:flex-start; gap:5px;">
+                            <span class="attr-name">包含道具</span>
+                            <span class="attr-val">5件套天空 + 宠物 + 称号 + 光环</span>
+                        </li>
+                        <li class="attr-item" style="flex-direction:column; align-items:flex-start; gap:5px;">
+                            <span class="attr-name">特殊效果</span>
+                            <span class="attr-val">宠物增加四维与三速</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3 class="section-title">常见问题 (FAQ)</h3>
+                    <div style="background: #333; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
+                        <h4 style="color: #fff; margin-bottom: 5px;">13年国庆套还能获得吗？</h4>
+                        <p style="font-size: 0.85rem; color: #999;">目前无法通过正常渠道直接购买，仅能在部分玩家交易市场或特定活动复刻中寻找。</p>
+                    </div>
+                    <div style="background: #333; padding: 15px; border-radius: 8px;">
+                        <h4 style="color: #fff; margin-bottom: 5px;">宠物和称号能继承吗？</h4>
+                        <p style="font-size: 0.85rem; color: #999;">根据当时规则，部分道具可以继承属性，但外观通常不继承。</p>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#">关于我们</a>
+                <a href="#">免责声明</a>
+                <a href="#">数据来源</a>
+                <a href="#">联系方式</a>
+            </div>
+            <p class="copyright">本站为玩家攻略整理站点，所有游戏版权归腾讯游戏所有。仅供信息回顾与参考。</p>
+        </div>
+    </footer>
+
+</body>
+</html>
