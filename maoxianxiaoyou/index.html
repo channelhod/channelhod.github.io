@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>冒险小游戏 - 热门网页版闯关游戏合集与攻略指南</title>
+    <meta name="description" content="本站提供海量高质量冒险小游戏，包含解谜、平台跳跃、RPG元素等类型。无需下载，直接在浏览器中畅玩，包含最新热门游戏推荐、游戏玩法指南及安全提示。">
+    <meta name="keywords" content="冒险小游戏,网页游戏,在线游戏,闯关游戏,益智游戏,游戏攻略">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6c5ce7;
+            --secondary-color: #a29bfe;
+            --accent-color: #fdcb6e;
+            --bg-dark: #1e1e2e;
+            --bg-card: #2d2d44;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+            --success: #00b894;
+            --radius: 12px;
+            --shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(30, 30, 46, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 16px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: white;
+            outline: none;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 60px 0;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(108, 92, 231, 0.2) 0%, rgba(45, 45, 68, 0) 100%);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .tag:hover {
+            background: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Categories Grid */
+        .section-title {
+            font-size: 1.5rem;
+            margin: 40px 0 20px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .game-card {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 180px;
+            background-color: #3d3d5c;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .play-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .game-card:hover .play-overlay {
+            opacity: 1;
+        }
+
+        .play-btn {
+            background-color: var(--primary-color);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+        }
+
+        .rating {
+            color: var(--accent-color);
+        }
+
+        .play-btn-text {
+            position: absolute;
+            font-size: 0.9rem;
+            font-weight: bold;
+            pointer-events: none;
+        }
+
+        /* Feature Section */
+        .feature-section {
+            background-color: var(--bg-card);
+            padding: 50px 0;
+            margin-top: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .feature-item h3 {
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 60px 0;
+        }
+
+        .faq-item {
+            background-color: var(--bg-card);
+            border-radius: var(--radius);
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .faq-question:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-muted);
+            display: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #151520;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .search-box {
+                width: 100%;
+                background: transparent;
+                border: none;
+            }
+            
+            .search-box input {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <span>◆</span> 冒险小游戏
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">新游推荐</a></li>
+                    <li><a href="#">攻略中心</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索游戏...">
+                <button>🔍</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>探索无限可能的<br>网页冒险世界</h1>
+                <p>无需下载，即刻开启刺激的闯关之旅。从解谜探索到动作战斗，这里汇聚了全网最精选的冒险小游戏。</p>
+                <div class="tags">
+                    <span class="tag">🔥 热门</span>
+                    <span class="tag">🧩 解谜</span>
+                    <span class="tag">⚔️ 动作</span>
+                    <span class="tag">🏰 沙盒</span>
+                    <span class="tag">🧠 益智</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-title">
+                <h2>本周热门冒险</h2>
+                <a href="#">查看全部 ></a>
+            </div>
+            <div class="grid">
+                <!-- Game Card 1 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/hero1/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">迷失森林：起源</h3>
+                        <div class="card-meta">
+                            <span>动作冒险</span>
+                            <span class="rating">★ 4.8</span>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #aaa;">在神秘的森林中寻找出路，躲避危险野兽，解开古老的谜题。</p>
+                    </div>
+                </article>
+
+                <!-- Game Card 2 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/hero2/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">像素城堡逃脱</h3>
+                        <div class="card-meta">
+                            <span>解谜</span>
+                            <span class="rating">★ 4.5</span>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #aaa;">经典的像素风格解谜游戏，利用你的智慧和道具逃离被诅咒的城堡。</p>
+                    </div>
+                </article>
+
+                <!-- Game Card 3 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/hero3/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">深渊潜行者</h3>
+                        <div class="card-meta">
+                            <span>生存</span>
+                            <span class="rating">★ 4.9</span>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #aaa;">在深海中收集资源，建造基地，抵御深海巨兽的袭击。</p>
+                    </div>
+                </article>
+
+                <!-- Game Card 4 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/hero4/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">星际迷航：指令</h3>
+                        <div class="card-meta">
+                            <span>科幻</span>
+                            <span class="rating">★ 4.6</span>
+                        </div>
+                        <p style="font-size: 0.9rem; color: #aaa;">驾驶飞船探索未知的星系，遭遇外星文明，完成你的星际使命。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="section-title">
+                <h2>最新更新</h2>
+            </div>
+            <div class="grid">
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/new1/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">狂野西部传说</h3>
+                        <div class="card-meta">
+                            <span>动作</span>
+                            <span class="rating">★ 4.7</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/new2/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">古墓猎人：暗影</h3>
+                        <div class="card-meta">
+                            <span>探险</span>
+                            <span class="rating">★ 4.4</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/new3/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">机械纪元：重启</h3>
+                        <div class="card-meta">
+                            <span>科幻</span>
+                            <span class="rating">★ 4.8</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/new4/400/250" alt="游戏封面">
+                        <div class="play-overlay">
+                            <div class="play-btn">▶</div>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">幽灵庄园的秘密</h3>
+                        <div class="card-meta">
+                            <span>恐怖</span>
+                            <span class="rating">★ 4.3</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="feature-section">
+            <div class="container">
+                <div class="feature-grid">
+                    <div class="feature-item">
+                        <div class="feature-icon">⚡</div>
+                        <h3>无需安装</h3>
+                        <p>所有游戏均采用HTML5技术构建，打开浏览器即可畅玩，告别漫长下载等待。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">🛡️</div>
+                        <h3>安全无毒</h3>
+                        <p>严格审核每一款上线的冒险小游戏，确保无病毒、无恶意广告，纯净体验。</p>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">📱</div>
+                        <h3>多端适配</h3>
+                        <p>无论是电脑大屏还是手机小屏，都能流畅运行，随时随地开启冒险。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container faq-section">
+            <div class="section-title">
+                <h2>常见问题 (FAQ)</h2>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何在电脑上玩这些冒险小游戏？</div>
+                <div class="faq-answer">您只需要确保电脑连接了互联网，点击游戏卡片上的“播放”按钮，游戏就会在浏览器中自动加载并开始运行，无需安装任何插件。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">游戏会占用手机存储空间吗？</div>
+                <div class="faq-answer">不会。我们的游戏都是网页版，所有数据都在服务器端处理，不会下载到您的设备中，因此不会占用手机存储。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">游戏支持离线游玩吗？</div>
+                <div class="faq-answer">目前大部分游戏需要联网加载资源。部分轻量级解谜游戏可能支持缓存机制，但为了获得最佳体验，建议在联网状态下游玩。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">遇到卡顿或无法加载怎么办？</div>
+                <div class="faq-answer">请尝试清理浏览器缓存，或者切换至更稳定的网络环境。如果问题依然存在，请刷新页面重试。</div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 15px;">
+                        <span>◆</span> 冒险小游戏
+                    </a>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">
+                        专注于提供高质量的网页冒险游戏体验，让玩家随时随地享受游戏的乐趣。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>游戏分类</h4>
+                    <ul>
+                        <li><a href="#">动作冒险</a></li>
+                        <li><a href="#">解谜闯关</a></li>
+                        <li><a href="#">射击射击</a></li>
+                        <li><a href="#">模拟经营</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                        <li><a href="#">用户协议</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">微博账号</a></li>
+                        <li><a href="#">玩家社区</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 冒险小游戏平台 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                const parent = item.parentElement;
+                parent.classList.toggle('active');
+            });
+        });
+
+        // Simple Search Interaction (Visual only)
+        const searchInput = document.querySelector('.search-box input');
+        const searchBtn = document.querySelector('.search-box button');
+        
+        function performSearch() {
+            if(searchInput.value.trim() !== "") {
+                alert("正在搜索: " + searchInput.value);
+                searchInput.value = "";
+            }
+        }
+
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', (e) => {
+            if(e.key === 'Enter') performSearch();
+        });
+    </script>
+</body>
+</html>
