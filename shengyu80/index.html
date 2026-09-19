@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="生于80后而立之年 - 深度解析80后一代三十岁后的生活状态、职业转型、家庭责任与自我重塑。提供职场进阶指南、亲子教育建议及中年危机应对策略。">
+    <meta name="keywords" content="生于80后而立之年,80后中年危机,80后职场转型,80后家庭教育,30岁人生规划">
+    <title>生于80后而立之年 - 职场进阶与生活重塑指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-light: #f8f9fa;
+            --text-main: #333;
+            --text-light: #666;
+            --border-color: #e1e4e8;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: #fff;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background: var(--bg-light);
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content */
+        .content-wrapper {
+            padding: 50px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--card-shadow);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.25rem;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Article List */
+        .article-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .article-item {
+            display: flex;
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .article-thumb {
+            width: 240px;
+            background-color: #eee;
+            flex-shrink: 0;
+            position: relative;
+        }
+        
+        .article-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 25px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .article-desc {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            align-self: flex-start;
+            color: var(--accent-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-light);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: #fff;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fff;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--accent-color);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background: #fafafa;
+        }
+
+        .faq-answer p {
+            padding: 20px;
+            color: var(--text-light);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: #fff;
+            padding: 50px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #bdc3c7;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7f8c8d;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #fff;
+                padding: 20px;
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .article-item {
+                flex-direction: column;
+            }
+
+            .article-thumb {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>80后</span>而立
+            </a>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#overview" class="active">人生阶段</a></li>
+                    <li><a href="#career">职场转型</a></li>
+                    <li><a href="#family">家庭责任</a></li>
+                    <li><a href="#guide">应对指南</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>生于80后，而立之年</h1>
+                <p>三十岁并非终点，而是重新定义自我的起点。我们正处于社会变革的浪潮中心，面临着职场瓶颈、家庭重担与自我价值实现的复杂交织。</p>
+                <div class="hero-tags">
+                    <span class="tag">#职场进阶</span>
+                    <span class="tag">#中年危机</span>
+                    <span class="tag">#亲子教育</span>
+                    <span class="tag">#生活平衡</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-bar">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>80后</h3>
+                    <p>中国社会的中坚力量</p>
+                </div>
+                <div class="stat-item">
+                    <h3>30+</h3>
+                    <p>人生最关键的转折点</p>
+                </div>
+                <div class="stat-item">
+                    <h3>3-1</h3>
+                    <p>职场、家庭与自我</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100%</h3>
+                    <p>都需要面对的挑战</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="container content-wrapper" id="overview">
+            <div class="section-header">
+                <h2>这一代人的共同命题</h2>
+                <p>回顾过去，我们经历了互联网的崛起与房地产的红利；展望未来，我们肩负着上有老下有小的家庭责任。</p>
+            </div>
+
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">💼</div>
+                    <h3>职场瓶颈与转型</h3>
+                    <p>80后一代在职场中往往处于管理岗位或技术骨干，面临35岁门槛的焦虑。如何突破职业天花板，实现从执行者到决策者的转变，是当下的核心议题。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🏠</div>
+                    <h3>家庭责任的加重</h3>
+                    <p>父母逐渐老去，孩子进入学龄期。房贷、教育、医疗构成了80后生活的“三座大山”，平衡工作与家庭成为了必修课。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🧘</div>
+                    <h3>自我重塑与焦虑</h3>
+                    <p>在快节奏的社会中，许多人开始反思生活方式。健康管理、精神内耗的缓解、寻找生活热情，成为了“而立之年”后新的生活目标。</p>
+                </article>
+            </div>
+
+            <div class="section-header">
+                <h2>深度解读与实用指南</h2>
+            </div>
+
+            <div class="article-list">
+                <article class="article-item">
+                    <div class="article-thumb">
+                        <img src="https://picsum.photos/seed/career80s/240/160" alt="职场转型示意图">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">职场进阶 · 5分钟阅读</div>
+                        <h3 class="article-title">80后职场人如何应对35岁职场危机？</h3>
+                        <p class="article-desc">面对互联网大厂裁员潮和传统行业转型，80后一代应当如何利用经验优势，构建不可替代的职场护城河？本文从技能升级、人脉积累和心态调整三个维度提供建议。</p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-thumb">
+                        <img src="https://picsum.photos/seed/family80s/240/160" alt="家庭生活示意图">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">家庭关系 · 8分钟阅读</div>
+                        <h3 class="article-title">二胎时代下80后的育儿焦虑与解法</h3>
+                        <p class="article-desc">当二胎政策放开，80后父母在精力有限的情况下，如何平衡对两个孩子的公平教育？探讨科学育儿与陪伴的重要性，拒绝“鸡娃”带来的焦虑。</p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+
+                <article class="article-item">
+                    <div class="article-thumb">
+                        <img src="https://picsum.photos/seed/health80s/240/160" alt="健康生活示意图">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-meta">身心健康 · 6分钟阅读</div>
+                        <h3 class="article-title">30岁后的身体信号：体检报告解读指南</h3>
+                        <p class="article-desc">告别20岁的身体，30岁后的代谢变慢是自然规律。通过解读常见的体检异常指标（如尿酸、脂肪肝、颈椎问题），制定适合80后的健康管理方案。</p>
+                        <a href="#" class="read-more">阅读全文 →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq-section" id="faq">
+            <div class="container faq-container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于生于80后而立之年的困惑与解答</p>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">30岁开始学一项新技能还来得及吗？</div>
+                    <div class="faq-answer">
+                        <p>完全来得及。80后最大的优势是心智成熟和自律能力强。很多成功的转型案例都发生在30岁之后。关键在于找到兴趣与市场需求的结合点，并制定长期的学习计划。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">如何缓解因同龄人比较带来的焦虑？</div>
+                    <div class="faq-answer">
+                        <p>焦虑往往源于比较。建议关注自己的成长曲线，而不是他人的结果。80后应当学会接受自己的平凡，并在自己擅长的领域深耕，建立稳定的内心秩序。</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">房贷压力大，是否应该考虑换工作？</div>
+                    <div class="faq-answer">
+                        <p>这是一个需要综合评估的财务决策。在换工作前，应先计算房贷还款能力、储蓄周期以及新工作的稳定性。如果新工作能带来显著的薪资增长或职业发展，可以尝试；否则，保持稳定现金流更为重要。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem;">
+                        致力于为80后一代提供有价值的生活、职场与心理建议。陪伴您度过人生的关键转折期。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>核心栏目</h4>
+                    <ul>
+                        <li><a href="#">职场进阶</a></li>
+                        <li><a href="#">亲子教育</a></li>
+                        <li><a href="#">心理健康</a></li>
+                        <li><a href="#">理财规划</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">投稿合作</a></li>
+                        <li><a href="#">广告投放</a></li>
+                        <li><a href="#">意见反馈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 生于80后而立之年. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('nav-menu');
+            nav.classList.toggle('show');
+        }
+
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+        faqItems.forEach(item => {
+            item.querySelector('.faq-question').addEventListener('click', () => {
+                // Close others
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) otherItem.classList.remove('active');
+                });
+                // Toggle current
+                item.classList.toggle('active');
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    document.getElementById('nav-menu').classList.remove('show');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
