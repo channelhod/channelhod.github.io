@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>粗口骂人-网络用语词典与情绪表达指南</title>
+    <meta name="description" content="本站提供网络流行粗口骂人词汇的详细解析、使用场景及替代表达方式。帮助用户理解情绪表达背后的文化含义，并提供文明沟通的建议。">
+    <meta name="keywords" content="粗口骂人,网络用语,脏话大全,情绪表达,替代用语">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e74c3c;
+            --bg-color: #f4f6f8;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            background-color: var(--accent-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #34495e 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Main Content */
+        main {
+            padding-bottom: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--primary-color);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* Categories Grid */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-bottom-color: var(--accent-color);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+        }
+
+        /* Dictionary List */
+        .dictionary-section {
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .term-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .term-item:last-child {
+            border-bottom: none;
+        }
+
+        .term-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+
+        .term-word {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--text-main);
+        }
+
+        .term-tag {
+            font-size: 0.8rem;
+            padding: 4px 8px;
+            background-color: #eee;
+            border-radius: 4px;
+            color: var(--text-secondary);
+        }
+
+        .term-desc {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+
+        .term-examples {
+            margin-top: 10px;
+            padding-left: 20px;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .term-examples li {
+            margin-bottom: 4px;
+        }
+
+        .term-note {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #fff8f8;
+            border-left: 4px solid var(--accent-color);
+            font-size: 0.9rem;
+            color: #d32f2f;
+        }
+
+        /* Tips Section */
+        .tips-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .tip-card {
+            background: white;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tip-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .tip-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .tip-list li::before {
+            content: '•';
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #aaa;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .tips-section {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span>词典</span> 粗口骂人
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">使用指南</a></li>
+                    <li><a href="#">文明用语</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>网络粗口骂人词汇大全</h1>
+            <p>深入解析网络流行语背后的文化含义与使用场景，帮助您准确理解情绪表达。</p>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <!-- Quick Categories -->
+        <section class="categories-grid">
+            <div class="category-card">
+                <span class="category-icon">🔥</span>
+                <h3>高频热词</h3>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">😠</span>
+                <h3>攻击性词汇</h3>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🤬</span>
+                <h3>情绪宣泄</h3>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🤐</span>
+                <h3>隐性侮辱</h3>
+            </div>
+        </section>
+
+        <!-- Dictionary Content -->
+        <section class="dictionary-section">
+            <div class="section-title">
+                <h2>常用词汇解析</h2>
+            </div>
+
+            <article class="term-item">
+                <div class="term-header">
+                    <span class="term-word">卧槽</span>
+                    <span class="term-tag">高频</span>
+                </div>
+                <p class="term-desc">最通用的感叹词和动词，常用于表达震惊、愤怒或惊讶。在网络语境中，其语气的强烈程度取决于上下文。</p>
+                <ul class="term-examples">
+                    <li>“卧槽，这也太夸张了吧！”</li>
+                    <li>“卧槽，这把游戏我要输了。”</li>
+                </ul>
+                <div class="term-note">注意：在公共场合或职场交流中，此词汇属于禁忌用语，建议使用“我去”或“天哪”代替。</div>
+            </article>
+
+            <article class="term-item">
+                <div class="term-header">
+                    <span class="term-word">傻逼</span>
+                    <span class="term-tag">攻击性</span>
+                </div>
+                <p class="term-desc">极具侮辱性的词汇，通常用于攻击对方的智商或认知能力。在网络争论中常作为终结话题或表达不屑的工具。</p>
+                <ul class="term-examples">
+                    <li>“你说话真让人听不懂，真傻逼。”</li>
+                    <li>“别跟我废话，傻逼。”</li>
+                </ul>
+                <div class="term-note">后果：使用此词极易引发骂战，且在大多数平台会被系统自动过滤或禁言。</div>
+            </article>
+
+            <article class="term-item">
+                <div class="term-header">
+                    <span class="term-word">TMD</span>
+                    <span class="term-tag">脏话</span>
+                </div>
+                <p class="term-desc">“他妈的”的缩写，用于表达强烈的厌恶、愤怒或无奈。比直接使用脏字程度稍轻，但依然属于不文明用语。</p>
+                <ul class="term-examples">
+                    <li>“TMD，这天气怎么突然变冷了。”</li>
+                    <li>“TMD，又忘记带钥匙了。”</li>
+                </ul>
+            </article>
+
+            <article class="term-item">
+                <div class="term-header">
+                    <span class="term-word">滚</span>
+                    <span class="term-tag">指令</span>
+                </div>
+                <p class="term-desc">简单的动词，意为“离开”或“消失”。在网络语境中，常作为拒绝沟通或驱逐某人的简短指令。</p>
+                <ul class="term-examples">
+                    <li>“不想聊就滚。”</li>
+                    <li>“这里不欢迎你，滚出去。”</li>
+                </ul>
+                <div class="term-note">建议：面对不喜欢的网友，建议使用“互删”或“不回”来处理，而非使用攻击性指令。</div>
+            </article>
+        </section>
+
+        <!-- Tips & Alternatives -->
+        <section class="tips-section">
+            <div class="tip-card">
+                <h3>🛡️ 文明沟通建议</h3>
+                <ul class="tip-list">
+                    <li>遇到分歧时，先深呼吸，尝试理性分析对方观点。</li>
+                    <li>使用“我觉得”代替“你总是”，减少攻击性。</li>
+                    <li>遇到无理谩骂，直接拉黑举报，不要陷入对骂。</li>
+                    <li>了解情绪背后的原因，愤怒往往源于需求未被满足。</li>
+                </ul>
+            </div>
+            <div class="tip-card">
+                <h3>🗣️ 替代表达方式</h3>
+                <ul class="tip-list">
+                    <li><strong>表达愤怒：</strong>“我很生气”、“这让我很不爽”</li>
+                    <li><strong>表达不屑：</strong>“我不认同你的看法”、“你的逻辑有问题”</li>
+                    <li><strong>表达惊讶：</strong>“天哪”、“居然”、“不可思议”</li>
+                    <li><strong>表达拒绝：</strong>“我不方便”、“我不想聊这个”</li>
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>本网站旨在提供语言文化解析，不鼓励任何形式的恶意攻击与辱骂。</p>
+            <p>&copy; 2023 粗口骂人词典 - 网络用语研究中心</p>
+        </div>
+    </footer>
+
+</body>
+</html>
