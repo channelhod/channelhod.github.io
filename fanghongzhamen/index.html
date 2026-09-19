@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>防洪闸门-水利工程安全防护与智能升降解决方案</title>
+    <meta name="description" content="专业提供工业级防洪闸门、钢制防洪闸门、液压升降防洪门等水利工程解决方案。涵盖防洪闸门的设计、安装、维护及防汛应急响应技术指南。">
+    <meta name="keywords" content="防洪闸门, 液压防洪闸门, 钢制闸门, 水利工程, 拍门, 橡胶坝">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #004494;
+            --accent-color: #e67e22;
+            --text-dark: #333333;
+            --text-light: #666666;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --container-width: 1200px;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 32px;
+            --spacing-xl: 64px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        .section {
+            padding: var(--spacing-xl) 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: var(--spacing-sm);
+            font-weight: 700;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: var(--spacing-lg);
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 86, 179, 0.85), rgba(0, 68, 148, 0.9)), 
+                        url('https://picsum.photos/seed/floodgate_hero/1920/1080.jpg') center/cover no-repeat;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: var(--spacing-md);
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.9;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: var(--spacing-md);
+            justify-content: center;
+        }
+
+        /* Feature Grid */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .feature-card {
+            background: var(--bg-white);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 86, 179, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: var(--spacing-md);
+            color: var(--primary-color);
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Product Showcase */
+        .products-section {
+            background-color: var(--bg-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .product-card {
+            background: var(--bg-white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            height: 240px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: var(--spacing-lg);
+        }
+
+        .product-tag {
+            display: inline-block;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            background-color: rgba(0, 86, 179, 0.1);
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .product-info h3 {
+            font-size: 1.4rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .product-info p {
+            color: var(--text-light);
+            margin-bottom: var(--spacing-md);
+            font-size: 0.95rem;
+        }
+
+        .product-specs {
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid var(--border-color);
+            padding-top: var(--spacing-md);
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        .spec-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .spec-item strong {
+            color: var(--text-dark);
+        }
+
+        /* Application Scenarios */
+        .scenario-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--spacing-lg);
+            align-items: center;
+        }
+
+        .scenario-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .scenario-text h2 {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: var(--spacing-md);
+        }
+
+        .scenario-list li {
+            margin-bottom: var(--spacing-md);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .scenario-list .check-icon {
+            color: var(--primary-color);
+            flex-shrink: 0;
+            margin-top: 4px;
+        }
+
+        .scenario-list h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .scenario-list p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .scenario-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .scenario-image img {
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-light);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: var(--spacing-lg);
+        }
+
+        .faq-item {
+            background: var(--bg-white);
+            padding: var(--spacing-lg);
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .faq-item h3 {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .faq-item p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: var(--spacing-xl) 0 var(--spacing-lg);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+            margin-bottom: var(--spacing-xl);
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: var(--spacing-md);
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: var(--spacing-sm);
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: var(--spacing-lg);
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                position: relative;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                padding: var(--spacing-md);
+                box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+                gap: var(--spacing-md);
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--primary-color)">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"/>
+                </svg>
+                <span>安澜水利</span>
+            </a>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <nav>
+                <ul id="nav-list">
+                    <li><a href="#home" class="active">首页</a></li>
+                    <li><a href="#products">产品中心</a></li>
+                    <li><a href="#solutions">应用场景</a></li>
+                    <li><a href="#services">工程服务</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container hero-content">
+                <h1>防洪闸门：守护城市水安全的坚固防线</h1>
+                <p>专业研发与制造各类钢制、液压、电动防洪闸门，提供从设计选型到安装维护的一站式水利工程解决方案。</p>
+                <div class="hero-buttons">
+                    <a href="#products" class="btn btn-primary">浏览产品系列</a>
+                    <a href="#contact" class="btn btn-outline" style="border-color: white; color: white;">获取工程方案</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>为什么选择我们的防洪闸门？</h2>
+                    <p>结合先进流体力学设计与高强度材料，确保在各种极端天气下的可靠运行</p>
+                </div>
+                <div class="features-grid">
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                        </div>
+                        <h3>高强度结构</h3>
+                        <p>采用Q235B或Q345B优质碳素结构钢，经过精密焊接与防腐处理，抗洪能力强，使用寿命长。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        <h3>快速响应机制</h3>
+                        <p>配备电动或液压驱动系统，可在紧急防汛期间实现快速升降，有效阻挡洪水入侵。</p>
+                    </article>
+                    <article class="feature-card">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                        </div>
+                        <h3>智能控制系统</h3>
+                        <p>支持远程监控、PLC自动控制及手动应急操作，数据实时传输，便于防汛指挥中心调度。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="section products-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>核心产品系列</h2>
+                    <p>针对不同水位、流速及安装环境，提供定制化闸门解决方案</p>
+                </div>
+                <div class="product-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/steel_gate/400/300" alt="钢制铸铁闸门">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">重型防护</span>
+                            <h3>钢制铸铁防洪闸门</h3>
+                            <p>适用于水库、涵洞及河道堤防。采用平面滚动或滑动支承，密封性能好，启闭灵活。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">跨度: 2m-12m</span>
+                                <span class="spec-item">材质: 碳钢/铸铁</span>
+                                <span class="spec-item">承压: 1-10米水头</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/hydraulic_gate/400/300" alt="液压升降防洪门">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">液压驱动</span>
+                            <h3>液压升降防洪门</h3>
+                            <p>利用液压缸推力驱动，运行平稳无冲击。特别适合城市排水泵站及地下车库防水。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">控制: PLC自动</span>
+                                <span class="spec-item">形式: 提升式/卷扬式</span>
+                                <span class="spec-item">特点: 无需机房</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <div class="product-image">
+                            <img src="https://picsum.photos/seed/check_valve/400/300" alt="拍门">
+                        </div>
+                        <div class="product-info">
+                            <span class="product-tag">单向止回</span>
+                            <h3>自动拍门</h3>
+                            <p>安装在排水管出口，利用水流压力自动开启，无水时自动关闭，防止倒灌。</p>
+                            <div class="product-specs">
+                                <span class="spec-item">直径: DN300-DN2000</span>
+                                <span class="spec-item">材质: 铸铁/不锈钢</span>
+                                <span class="spec-item">功能: 防倒灌</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Scenarios -->
+        <section id="solutions" class="section">
+            <div class="container">
+                <div class="scenario-container">
+                    <div class="scenario-text">
+                        <h2>广泛的应用场景</h2>
+                        <p style="margin-bottom: 24px; color: var(--text-light);">我们的防洪闸门广泛应用于城市防汛、农田排涝、工业排水及市政基础设施建设中，有效应对内涝风险。</p>
+                        <ul class="scenario-list">
+                            <li>
+                                <div class="check-icon">✓</div>
+                                <div>
+                                    <h4>城市防洪排涝</h4>
+                                    <p>用于立交桥下、低洼地带及地下车库的挡水墙，保障城市正常运行。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check-icon">✓</div>
+                                <div>
+                                    <h4>水利枢纽工程</h4>
+                                    <p>配合水闸、溢洪道使用，调节水位，控制流量，服务于农业灌溉。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="check-icon">✓</div>
+                                <div>
+                                    <h4>矿山与工业排水</h4>
+                                    <p>矿井排水口、化工厂污水处理站，防止污水倒流污染环境。</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="scenario-image">
+                        <img src="https://picsum.photos/seed/flood_control/600/400" alt="城市防洪闸门应用场景">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="section faq-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>常见问题解答</h2>
+                    <p>关于防洪闸门选型、安装及维护的疑问</p>
+                </div>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3>如何确定防洪闸门的尺寸和承压能力？</h3>
+                        <p>尺寸需根据安装孔口大小决定，承压能力则取决于当地历史最高水位、流速及安全系数。建议联系专业工程师进行现场勘测。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>闸门的防腐处理有哪些方式？</h3>
+                        <p>常规采用热镀锌处理，适用于一般环境。对于高腐蚀性环境，建议采用喷锌喷铝复合涂层或不锈钢材质。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>电动与液压驱动哪个更好？</h3>
+                        <p>电动结构简单，成本低；液压推力大，运行平稳，适合大跨度或深水环境。具体选择视工程预算和工况而定。</p>
+                    </div>
+                    <div class="faq-item">
+                        <h3>安装防洪闸门需要多长时间？</h3>
+                        <p>小型拍门安装较快，大型钢闸门需涉及土建配合，通常需要3-15天不等，具体视现场条件而定。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>安澜水利</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.8;">专注水利工程设备研发制造20年，致力于为全球客户提供安全、高效的水利防护产品与服务。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#solutions">工程案例</a></li>
+                        <li><a href="#faq">技术支持</a></li>
+                        <li><a href="#">联系我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品分类</h4>
+                    <ul>
+                        <li><a href="#">钢制闸门</a></li>
+                        <li><a href="#">液压闸门</a></li>
+                        <li><a href="#">铸铁闸门</a></li>
+                        <li><a href="#">拍门</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话: 400-123-4567</li>
+                        <li>邮箱: sales@anlunwater.com</li>
+                        <li>地址: 某某市高新技术产业开发区</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 安澜水利设备有限公司 版权所有 | 备案号：京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const navList = document.getElementById('nav-list');
+            navList.classList.toggle('show');
+        }
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    document.getElementById('nav-list').classList.remove('show');
+                    
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to nav on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav ul li a').forEach(a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href').includes(current)) {
+                    a.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
